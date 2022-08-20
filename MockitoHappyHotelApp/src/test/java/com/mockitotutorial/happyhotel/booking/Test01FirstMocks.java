@@ -30,6 +30,8 @@ class Test01FirstMocks {
 		this.bookingService = new BookingService(paymentServiceMock, roomServiceMock, bookingDAOMock, mailSenderMock);
 	}
 
+	// The method we are testing here doesn't require any dependencies (classes) 
+	// but since we still need to create the BookingService which required 4 other classes, we just mock them above
 	@Test
 	void should_CalculateCorrectPrice_when_CorrectInput() {
 		// Given
