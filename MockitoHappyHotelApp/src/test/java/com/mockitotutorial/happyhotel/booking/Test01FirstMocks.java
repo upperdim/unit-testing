@@ -18,13 +18,16 @@ class Test01FirstMocks {
 	
 	@BeforeEach
 	void setup() {
+		// Class you want to test may require other classes
+		// Normally you would create those required classes @BeforeEach test
+		// But those classes might not be possible for you to create for unit testing (such as db connections)
+		// In this case, you can mock those classes for the sake of unit testing
 		this.paymentServiceMock = mock(PaymentService.class);
 		this.roomServiceMock = mock(RoomService.class);
 		this.bookingDAOMock = mock(BookingDAO.class);
 		this.mailSenderMock = mock(MailSender.class);
 		
 		this.bookingService = new BookingService(paymentServiceMock, roomServiceMock, bookingDAOMock, mailSenderMock);
-		
 	}
 
 	@Test
