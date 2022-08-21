@@ -31,6 +31,7 @@ class Test05ThrowingExceptions {
 	// when(...).thenThrow(...): make a mock throw exceptions
 	//
 	// RoomService.findAvailableRoomId() throws an exception when no rooms are available 
+	// This tests the line 32 exception possibility on BookingService.makeBooking method
 	@Test
 	void should_ThrowException_when_NoRoomAvailable() {
 		// Given (What it should do = throw an exception)
@@ -40,6 +41,9 @@ class Test05ThrowingExceptions {
 			.thenThrow(BusinessException.class);
 		
 		// When (What it actually does)
+		//
+		// Notice we made roomServiceMock throw an exception above, but we are calling bookingService now
+		// because we are actually testing bookingService.makeBooking and using roomServiceMock to make it go under a certain condition
 		Executable executable = () -> bookingService.makeBooking(bookingRequest);
 		
 		// Then (Compare)
