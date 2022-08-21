@@ -1,3 +1,9 @@
 MockitoHappyHotelApp/.*
+MockitoHappyHotelApp/target/
+HappyHotelApp/
+
 JUnit1HealthyCoderApp/.*
+JUnit1HealthyCoderApp/bin
+
 JUnit2RealEstateApp/.*
+JUnit2RealEstateApp/bin
