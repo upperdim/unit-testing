@@ -4,8 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.jupiter.api.*;
-import java.time.LocalDate;
-import java.util.*;
+import java.util.Collections;
 
 
 class Test04MultipleThenReturnCalls {
@@ -29,6 +28,8 @@ class Test04MultipleThenReturnCalls {
 
 	// First time we call the method, it will return a list of single room
 	// Second time we call (second .thenReturn) it will return an empty list
+	//
+	// Similarly, you can add a third or forth call and so on... by chaining .thenReturn()
 	@Test
 	void should_CountAvailablePlaces_when_CalledMultipleTimes() {
 		// Given
@@ -46,7 +47,7 @@ class Test04MultipleThenReturnCalls {
 		// Then
 		assertAll(
 			() -> assertEquals(expectedFirstCall, actualFirstCall),
-			() -> assertEquals(expectedFirstCall, actualFirstCall)
+			() -> assertEquals(expectedSecondCall, actualSecondCall)
 		);
 	}
 
