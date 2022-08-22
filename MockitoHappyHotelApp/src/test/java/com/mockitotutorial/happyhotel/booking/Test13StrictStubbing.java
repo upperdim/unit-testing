@@ -13,6 +13,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+//When we use MockitoExtension, a feature called "Strict Stubbing" is automatically enabled.
 @ExtendWith(MockitoExtension.class)
 class Test13StrictStubbing {
 
@@ -34,7 +35,6 @@ class Test13StrictStubbing {
 	@Captor
 	private ArgumentCaptor<Double> doubleCaptor;
 
-	// When we use BDD Mockito aliases, a feature called "Strict Stubbing" is automatically enabled.
 	@Test
 	void should_InvokePayment_when_Prepaid() {
 		// Given
