@@ -46,7 +46,7 @@ class Test06Matchers {
 		//
 		// Instead of any, if we wanted an exact primitive, we could use eq(400.0) for the second parameter for example
 		//
-		// anyString() will not mathc a null string object. any() should be used for null strings.
+		// anyString() will not match a null string object. any() should be used for null strings.
 		when(this.paymentServiceMock.pay(any(BookingRequest.class), anyDouble()))
 			.thenThrow(BusinessException.class);
 		

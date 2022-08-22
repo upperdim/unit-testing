@@ -20,7 +20,7 @@ class Test01FirstMocks {
 	void setup() {
 		// Class you want to test may require other classes
 		// Normally you would create those required classes @BeforeEach test
-		// But those classes might not be possible for you to create for unit testing (such as db connections, or internet requests when we are offline)
+		// But those classes might not be possible for you to create unit tests (such as db connections, or internet requests when we are offline)
 		// In this case, you can mock those classes for the sake of unit testing
 		this.paymentServiceMock = mock(PaymentService.class);
 		this.roomServiceMock = mock(RoomService.class);
