@@ -1,9 +1,9 @@
-MockitoHappyHotelApp/.*
-MockitoHappyHotelApp/target/
 HappyHotelApp/
 
-JUnit1HealthyCoderApp/.*
-JUnit1HealthyCoderApp/bin
+**/bin
+**/target
 
-JUnit2RealEstateApp/.*
-JUnit2RealEstateApp/bin
+.idea/
+.settings
+.classpath
+.project
